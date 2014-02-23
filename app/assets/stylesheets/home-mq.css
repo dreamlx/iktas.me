@@ -1,0 +1,37 @@
+@media screen and (max-width: 1024px) {
+    .gallery-new {width:120px; top:27px; right:-31px;}
+}
+@media screen and (max-width: 860px) {
+    .share {display:none;}
+}
+@media screen and (max-width: 768px) {
+    .gallery-new {width:70px; top:32px; right:-19px;}
+    .m1 {float:left;}
+    .m1 ul li {float:none; margin-bottom:20px;}
+    .m1-txt {border:none;}
+    .m2 {margin-left:320px;}
+    .m2 ul li {float:none; width:100%; margin-bottom:20px;}
+    .m2-img, .m2-txt {margin:0 0 15px 15px;}
+}
+@media screen and (max-width: 600px) {
+    .menu ul {font-size:1.2em;}
+    .menu ul li {padding:0 4px;}
+    .gallery-new {width:60px; top:33px; right:-17px;}
+}
+@media screen and (max-width: 480px) {
+    .m {display:block;}
+    .menu {display:none; float:none; position:absolute; top:90px; right:0; z-index:6; background:#E0E0E0; width:100px; border-left:2px solid #999;}
+    .menu ul {float:none; line-height:30px;}
+    .menu ul li {display:block; padding:0 0 0 10px;}
+    .m1 {float:none;}
+    .m1 ul li {margin:auto; margin-bottom:20px;}
+    .m2 {margin:0;}
+    .m2-img, .m2-txt {margin:0 30px 15px 30px;}
+}
+@media screen and (max-width: 320px) {
+    .w, #bd {padding:0 10px;}
+    .gallery-new {width:50px; top:35px; right:-10px;}
+    .m1 li {width:300px;}
+    .m1 li:first-child .m1-txt p {font-size:1.2em;}
+    .m2-img, .m2-txt {margin:0 20px 15px 20px;}
+}

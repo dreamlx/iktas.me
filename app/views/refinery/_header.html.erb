@@ -1,0 +1,10 @@
+<div class="share">
+    <a href="#" class="li">Linkedin</a>
+    <a href="#" class="tw">Twitter</a>
+    <a href="#" class="wb">Weibo</a>
+</div>
+<%= Refinery::Pages::MenuPresenter.new(refinery_menu_pages, self).to_html %>
+<h1 class='logo'>
+  <%= link_to Refinery::Core.site_name, refinery.root_path %>
+</h1>
+

@@ -1,0 +1,29 @@
+.m2 {padding:20px 0;}
+@media screen and (max-width: 1024px) {
+
+}
+@media screen and (max-width: 890px) {
+    .share, .cqr {display:none;}
+}
+@media screen and (max-width: 768px) {
+    .cmap {margin-left:60px;}
+}
+@media screen and (max-width: 600px) {
+    .menu ul {font-size:1.2em;}
+    .menu ul li {padding:0 4px;}
+    .contact {padding:20px 0;}
+    .cmap {margin-left:100px;}
+    .cicon {margin-left:40px;}
+    .ctxt {float:none; clear:both; width:320px; margin:auto;}
+}
+@media screen and (max-width: 480px) {
+    .m {display:block;}
+    .menu {display:none; float:none; position:absolute; top:90px; right:0; z-index:6; background:#E0E0E0; width:100px; border-left:2px solid #999;}
+    .menu ul {float:none; line-height:30px;}
+    .menu ul li {display:block; padding:0 0 0 10px;}
+    .cmap {margin:auto; float:none; width:173px;}
+    .cicon {display:none;}
+}
+@media screen and (max-width: 320px) {
+    .w, #bd {padding:0 10px;}
+}

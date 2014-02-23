@@ -10,7 +10,7 @@ a:hover {text-decoration:none;}
 
 body,html {width:100%; height:100%;}
 body {font-family:"Helvetica Neue",Helvetica,Arial,sans-serif; font-size:62.5%;}
-
+#body{min-height: 500px;}
 .logo a {background-image:url(/assets/logo.png); background-repeat:no-repeat;}
 @media only screen and (-webkit-min-device-pixel-ratio: 2), 
 only screen and (min-device-pixel-ratio: 2) {
@@ -101,3 +101,5 @@ only screen and (min-device-pixel-ratio: 2) {
 .cicon {width:140px; height:169px; float:left; background-position:15px -550px; margin-top:28px;}
 .ctxt {float:left; line-height:40px; font-size:2.4em; padding-top:20px; color:#484848; margin-top:28px;}
 .contact-txt {line-height:24px; padding:10px 0; text-align:center; font-size:1.4em; color:#757575;}
+
+#show_content{ margin-top:20px; margin-bottom: 20px; }

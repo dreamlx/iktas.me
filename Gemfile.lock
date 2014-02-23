@@ -156,7 +156,6 @@ GEM
     refinerycms-images (2.1.1)
       dragonfly (~> 0.9.14)
       refinerycms-core (= 2.1.1)
-    refinerycms-menus (1.0)
     refinerycms-page-images (2.1.0)
       refinerycms-pages (~> 2.1.0)
     refinerycms-pages (2.1.1)
@@ -212,7 +211,6 @@ DEPENDENCIES
   refinerycms (~> 2.1.0)
   refinerycms-acts-as-indexed (~> 1.0.0)
   refinerycms-blog (~> 2.1.0)
-  refinerycms-menus
   refinerycms-page-images (~> 2.1.0)
   sass-rails (~> 3.2.3)
   sqlite3

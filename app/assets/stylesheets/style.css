@@ -108,3 +108,24 @@ only screen and (min-device-pixel-ratio: 2) {
 .contact-txt {line-height:24px; padding:10px 0; text-align:center; font-size:1.4em; color:#757575;}
 
 #show_content{ margin-top:20px; margin-bottom: 20px; }
+
+.menu ul ul{
+    position:absolute; /*相对于父元素的绝对位置*/
+    top:-999em; /*移动到浏览器可视窗口之外*/
+    }
+
+.menu ul li:hover ul{
+    position:absolute; /*相对于父元素的位置*/
+    top:0em; /*与父元素处于一个水平位置*/
+    margin-top:50px; /*将它下移29像素，以免遮住一级菜单*/
+    }
+
+.menu li {
+position:relative;/*你可以试着拿掉这个属性，看看最终菜单的显示效果? ^_^ */
+}
+
+.menu li li {
+  height:50px;
+float:left;
+font-size:1em;
+}

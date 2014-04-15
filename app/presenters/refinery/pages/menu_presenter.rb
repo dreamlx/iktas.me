@@ -21,7 +21,7 @@ module Refinery
       self.list_tag = :ul
       self.list_first_css = :nav
       self.carret = '<b class="caret"></b>'
-      self.list_dropdown_css = "dropdown-menu"
+      self.list_dropdown_css = "submenu"
       self.link_dropdown_options = {class: "toggle-dropdown", data: {:toggle=>"dropdown"}}
       self.list_item_tag = :li
       self.list_item_dropdown_css = :dropdown

@@ -151,6 +151,7 @@ nav ul ul {
   nav ul ul {
   background: #5f6975; border-radius: 0px; padding: 0;
   position: absolute; top: 100%;
+  margin-top: -5px;
 }
   nav ul ul li {
     float: none; 

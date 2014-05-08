@@ -16,7 +16,7 @@ default_run_options[:pty] = true  # Must be set for the password prompt
 set :deploy_to, "/srv/www/iktas.me"  #部署在服务器上的地址
 
 set :user, "root" #ssh连接服务器的帐号
-set :use_sudo, false
+# set :use_sudo, false    #comment it because using root to login
 set :ssh_options, { :forward_agent => true }
 #repo details
 set :scm, :git

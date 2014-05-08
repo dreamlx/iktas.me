@@ -27,6 +27,10 @@ set :repository,  "git@github.com:dreamlx/iktas.me.git" #项目在github上的�
 set :branch, "master" #github上具体的分支
 set :deploy_via, :remote_cache
 
+# Setup Shared Folders
+#   that should be created inside the shared_path
+directory_configuration = %w(db config system)
+
 before 'deploy:setup', 'rvm:install_rvm'
 
 #tasks

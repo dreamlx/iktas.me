@@ -27,9 +27,9 @@ set :repository,  "git@github.com:dreamlx/iktas.me.git" #项目在github上的�
 set :branch, "master" #github上具体的分支
 set :deploy_via, :remote_cache
 
-# Setup Shared Folders
-#   that should be created inside the shared_path
-directory_configuration = %w(db config system)
+# # Setup Shared Folders
+# #   that should be created inside the shared_path
+# directory_configuration = %w(db config system)
 
 before 'deploy:setup', 'rvm:install_rvm'
 
@@ -65,8 +65,8 @@ namespace :db do
   desc "Moves the SQLite3 Production Database to the shared path"
   task :move_to_shared do
     puts "\n\n=== Moving the SQLite3 Production Database to the shared path! ===\n\n"
-    run "mv #{current_path}/db/production.sqlite3 #{shared_path}/db/production.sqlite3"
-    system "cap deploy:setup_symlinks"
+    run "mv #{current_path}/db/production.sqlite3 #{shared_path}/production.sqlite3"
+    run "ln -nfs #{shared_path}/production.sqlite3 #{release_path}/db/production"
     system "cap deploy:set_permissions"
   end
 end

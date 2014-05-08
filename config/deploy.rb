@@ -54,16 +54,16 @@ namespace :deploy do
     puts "\n\n=== Setting Permissions! ===\n\n"
     run "chown -R www-data:www-data #{deploy_to}"
   end
+end
 
-  # https://gist.github.com/meskyanichi/157958
-  namespace :db do
-    desc "Moves the SQLite3 Production Database to the shared path"
-    task :move_to_shared do
-      puts "\n\n=== Moving the SQLite3 Production Database to the shared path! ===\n\n"
-      run "mv #{current_path}/db/production.sqlite3 #{shared_path}/db/production.sqlite3"
-      system "cap deploy:setup_symlinks"
-      system "cap deploy:set_permissions"
-    end
+# https://gist.github.com/meskyanichi/157958
+namespace :db do
+  desc "Moves the SQLite3 Production Database to the shared path"
+  task :move_to_shared do
+    puts "\n\n=== Moving the SQLite3 Production Database to the shared path! ===\n\n"
+    run "mv #{current_path}/db/production.sqlite3 #{shared_path}/db/production.sqlite3"
+    system "cap deploy:setup_symlinks"
+    system "cap deploy:set_permissions"
   end
 end
 
@@ -72,4 +72,4 @@ end
 after "deploy:update", "deploy:symlink_shared" 
 after "deploy:update", "deploy:migrate"
 after "deploy:migrate", "deploy:precompile"
-after "deploy:migrate", "deploy:db:move_to_shared"
+after "deploy", "db:move_to_shared"

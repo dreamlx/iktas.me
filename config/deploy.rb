@@ -75,6 +75,6 @@ end
 
 after "deploy:update", "deploy:symlink_shared" 
 after "deploy:update", "deploy:migrate"
-after "deploy:migrate", "deploy:precompile"
+after "deploy:migrate", "deploy:set_permissions"
 # after "deploy", "db:move_to_shared"
-# after "deploy", "db:migrate"
+# after "deploy", "deploy:migrate"

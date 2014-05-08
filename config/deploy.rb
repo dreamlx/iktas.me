@@ -61,20 +61,20 @@ namespace :deploy do
 end
 
 # https://gist.github.com/meskyanichi/157958
-namespace :db do
-  desc "Moves the SQLite3 Production Database to the shared path"
-  task :move_to_shared do
-    puts "\n\n=== Moving the SQLite3 Production Database to the shared path! ===\n\n"
-    run "mv #{current_path}/db/production.sqlite3 #{shared_path}/production.sqlite3"
-    run "ln -nfs #{shared_path}/production.sqlite3 #{release_path}/db/production"
-    system "cap deploy:set_permissions"
-  end
-end
+# namespace :db do
+#   desc "Moves the SQLite3 Production Database to the shared path"
+#   task :move_to_shared do
+#     puts "\n\n=== Moving the SQLite3 Production Database to the shared path! ===\n\n"
+#     run "mv #{current_path}/db/production.sqlite3 #{shared_path}/production.sqlite3"
+#     run "ln -nfs #{shared_path}/production.sqlite3 #{release_path}/db/production"
+#     system "cap deploy:set_permissions"
+#   end
+# end
 
 
 
 after "deploy:update", "deploy:symlink_shared" 
 after "deploy:update", "deploy:migrate"
 after "deploy:migrate", "deploy:precompile"
-after "deploy", "db:move_to_shared"
+# after "deploy", "db:move_to_shared"
 # after "deploy", "db:migrate"

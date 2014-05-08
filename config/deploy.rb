@@ -29,26 +29,23 @@ set :deploy_via, :remote_cache
 
 #tasks
 namespace :deploy do
-desc "SCP transfer figaro configuration to the shared folder"
+  desc "SCP transfer figaro configuration to the shared folder"
 
+  task :restart, :roles => :app do
+    run "touch #{current_path}/tmp/restart.txt"    
+  end
 
-task :restart, :roles => :app do
-  run "touch #{current_path}/tmp/restart.txt"
-  
-end
+  task :stop, :roles => :app do
+      #do nonthing
+  end
 
-task :stop, :roles => :app do
-    #do nonthing
-end
+  desc "Symlink shared resources on each release - not used"
+  task :symlink_shared, :roles => :app do    
+  end
 
-desc "Symlink shared resources on each release - not used"
-task :symlink_shared, :roles => :app do
-  
-end
-
-task :precompile, :roles => :web do  
+  task :precompile, :roles => :web do  
     run "cd #{current_path} && #{rake} RAILS_ENV=production assets:precompile"  
-end  
+  end  
 
 end
 

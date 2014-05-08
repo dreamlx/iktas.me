@@ -48,7 +48,7 @@ namespace :deploy do
   task :precompile, :roles => :web do  
     run "cd #{current_path} && #{rake} RAILS_ENV=production assets:precompile"  
   end
-  
+
   desc "Sets permissions for Rails Application"
   task :set_permissions do
     puts "\n\n=== Setting Permissions! ===\n\n"
@@ -72,3 +72,4 @@ end
 after "deploy:update", "deploy:symlink_shared" 
 after "deploy:update", "deploy:migrate"
 after "deploy:migrate", "deploy:precompile"
+after "deploy:migrate", "deploy:db:move_to_shared"

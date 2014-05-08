@@ -13,7 +13,7 @@ role :db,  location, :primary => true # This is where Rails migrations will run
 
 #server details
 default_run_options[:pty] = true  # Must be set for the password prompt
-set :deploy_to, "/srv/www/railsapp/iktas.me"  #部署在服务器上的地址
+set :deploy_to, "/srv/www/iktas.me"  #部署在服务器上的地址
 
 set :user, "root" #ssh连接服务器的帐号
 set :use_sudo, false
@@ -26,6 +26,8 @@ set :scm_passphrase, ENV["GITHUB_PASSWORD"] #设置github  ssh时设置到密码
 set :repository,  "git@github.com:dreamlx/iktas.me.git" #项目在github上的帐号
 set :branch, "master" #github上具体的分支
 set :deploy_via, :remote_cache
+
+before 'deploy:setup', 'rvm:install_rvm'
 
 #tasks
 namespace :deploy do

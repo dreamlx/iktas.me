@@ -48,6 +48,12 @@ namespace :deploy do
   task :precompile, :roles => :web do  
     run "cd #{current_path} && #{rake} RAILS_ENV=production assets:precompile"  
   end
+  
+  desc "Sets permissions for Rails Application"
+  task :set_permissions do
+    puts "\n\n=== Setting Permissions! ===\n\n"
+    run "chown -R www-data:www-data #{deploy_to}"
+  end
 
   # https://gist.github.com/meskyanichi/157958
   namespace :db do

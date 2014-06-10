@@ -113,14 +113,14 @@ nav ul ul {
     display: block;
   }
   nav ul {
-  font-size:1.6em;
+  font-size: 1.4em;
   background: #efefef; 
   background: linear-gradient(top, #efefef 0%, #bbbbbb 100%);  
   background: -moz-linear-gradient(top, #efefef 0%, #bbbbbb 100%); 
   background: -webkit-linear-gradient(top, #efefef 0%,#bbbbbb 100%); 
   box-shadow: 0px 0px 9px rgba(0,0,0,0.15);
   padding: 0 20px;
-  margin-top: 5px;
+  margin-top: 10 px;
   border-radius: 10px;  
   list-style: none;
   position: relative;
@@ -160,7 +160,7 @@ nav ul ul {
     position: relative;
   }
     nav ul ul li a {
-      padding: 15px 40px;
+      padding: 15px 20px;
       color: #fff;
     } 
       nav ul ul li a:hover {
